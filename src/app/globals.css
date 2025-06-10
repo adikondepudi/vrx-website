@@ -1,25 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply bg-[#111111] text-gray-200 antialiased;
+:root {
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-accent: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --text-shadow-light: 0 1px 3px rgba(0, 0, 0, 0.12);
+  --text-shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Custom scrollbar for a more polished look - optional but recommended */
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[#000000] text-gray-100 font-light;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  letter-spacing: -0.01em;
+  line-height: 1.5;
+}
+
+/* Typography Scale - Apple-inspired */
+.text-display {
+  @apply text-6xl md:text-8xl font-extralight tracking-tight;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
+.text-headline {
+  @apply text-4xl md:text-6xl font-light tracking-tight;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+}
+
+.text-title {
+  @apply text-2xl md:text-3xl font-medium tracking-tight;
+  line-height: 1.15;
+  letter-spacing: -0.015em;
+}
+
+.text-body-large {
+  @apply text-lg md:text-xl font-light;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+.text-body {
+  @apply text-base font-light;
+  line-height: 1.5;
+  letter-spacing: -0.005em;
+}
+
+/* Premium Gradients */
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-accent-text {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Refined Button Styles */
+.btn-primary {
+  @apply px-8 py-4 bg-white text-black font-medium rounded-full hover:bg-gray-100 transition-all duration-300;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+}
+
+.btn-secondary {
+  @apply px-8 py-4 border border-white/20 text-white font-medium rounded-full hover:bg-white/10 transition-all duration-300;
+  backdrop-filter: blur(20px);
+}
+
+/* Enhanced Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Premium Shadows */
+.shadow-premium {
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.1),
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    0 32px 64px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-glow {
+  box-shadow: 
+    0 0 20px rgba(102, 126, 234, 0.3),
+    0 0 40px rgba(102, 126, 234, 0.1);
+}
+
+/* Refined Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 2px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #1C1C1E;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #4a4a4a;
-  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 1px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Selection Styling */
+::selection {
+  background: rgba(102, 126, 234, 0.3);
+  color: white;
+}
+
+/* Focus States */
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid rgba(102, 126, 234, 0.6);
+  outline-offset: 2px;
+}
+
+/* Subtle Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Premium Video Styling */
+video {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Enhanced Image Styling */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Refined Grid Layouts */
+.grid-premium {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+@media (min-width: 768px) {
+  .grid-premium {
+    gap: 3rem;
+  }
+}
+
+/* Text Reveal Animation */
+.text-reveal {
+  overflow: hidden;
+}
+
+.text-reveal span {
+  display: inline-block;
+  transform: translateY(100%);
+  transition: transform 0.8s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.text-reveal.revealed span {
+  transform: translateY(0);
+}
+
+/* Magnetic Hover Effect */
+.magnetic {
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.magnetic:hover {
+  transform: scale(1.05);
+}
+
+/* Premium Container */
+.container-premium {
+  @apply mx-auto px-6 md:px-8 lg:px-12;
+  max-width: 1400px;
+}
+
+/* Refined Section Spacing */
+.section-padding {
+  @apply py-24 md:py-32 lg:py-40;
+}
+
+.section-padding-small {
+  @apply py-16 md:py-20 lg:py-24;
 }

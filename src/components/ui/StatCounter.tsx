@@ -9,6 +9,7 @@ type StatCounterProps = {
   suffix?: string;
   label: string;
   decimals?: number;
+  accentColor?: string;
 };
 
 export default function StatCounter({ 
@@ -16,7 +17,8 @@ export default function StatCounter({
   prefix = '', 
   suffix = '', 
   label = '', 
-  decimals = 0 
+  decimals = 0,
+  accentColor = 'text-primary-400'
 }: StatCounterProps) {
   const ref = useRef<HTMLSpanElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
@@ -27,9 +29,10 @@ export default function StatCounter({
       
       const controls = animate(0, targetNumber, {
         duration: 2.5,
-        ease: 'easeOut',
+        ease: [0.76, 0, 0.24, 1],
         onUpdate(value) {
-          node.textContent = prefix + value.toFixed(decimals).replace(/\B(?=(\d{3})+(?!\d))/g, ",") + suffix;
+          const formattedValue = value.toFixed(decimals).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+          node.textContent = prefix + formattedValue + suffix;
         },
       });
 
@@ -38,9 +41,27 @@ export default function StatCounter({
   }, [isInView, targetNumber, prefix, suffix, decimals]);
 
   return (
-    <div className="flex flex-col items-center">
-      <span ref={ref} className="text-4xl md:text-5xl font-bold text-blue-400">0</span>
-      <p className="mt-2 text-gray-400 font-light text-center">{label}</p>
+    <div className="text-center group">
+      {/* Number Display */}
+      <div className="mb-4">
+        <span 
+          ref={ref} 
+          className={`text-5xl md:text-6xl font-extralight tracking-tight ${accentColor} block transition-all duration-300 group-hover:scale-105`}
+        >
+          0
+        </span>
+      </div>
+
+      {/* Label */}
+      <div className="space-y-2">
+        <div className="w-12 h-px bg-gradient-to-r from-transparent via-gray-600 to-transparent mx-auto" />
+        <p className="text-sm md:text-base font-medium text-gray-400 leading-relaxed tracking-wide max-w-48 mx-auto">
+          {label}
+        </p>
+      </div>
+
+      {/* Subtle glow effect on hover */}
+      <div className={`absolute inset-0 ${accentColor.replace('text-', 'bg-').replace('-400', '-500/10')} rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl`} />
     </div>
   );
 }
