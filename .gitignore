@@ -79,3 +79,5 @@ Thumbs.db
 # Optional: testing snapshots or coverage
 coverage/
 __snapshots__/
+
+public/images/
