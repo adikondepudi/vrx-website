@@ -88,7 +88,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${inter.variable} overflow-x-hidden`}>
       <head>
         {/* Preload critical fonts */}
         <link
@@ -105,9 +105,26 @@ export default function RootLayout({
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        
+        {/* Add GSAP ScrollTrigger fix styles */}
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            .pin-spacer {
+              overflow: visible !important;
+            }
+            body {
+              overflow-x: hidden !important;
+            }
+            html {
+              overflow-x: hidden !important;
+            }
+          `
+        }} />
       </head>
-      <body className={`${inter.className} antialiased`}>
-        {children}
+      <body className={`${inter.className} antialiased overflow-x-hidden relative`}>
+        <div className="min-h-screen relative overflow-x-hidden">
+          {children}
+        </div>
         
         {/* Structured Data */}
         <script

@@ -9,8 +9,9 @@ export default function HeroSection() {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
-  const backgroundX = useTransform(mouseX, [0, dimensions.width], [0, 30]);
-  const backgroundY = useTransform(mouseY, [0, dimensions.height], [0, 30]);
+  // Reduced parallax range to prevent overflow
+  const backgroundX = useTransform(mouseX, [0, dimensions.width], [-15, 15]);
+  const backgroundY = useTransform(mouseY, [0, dimensions.height], [-15, 15]);
 
   useEffect(() => {
     setMounted(true);
@@ -48,14 +49,16 @@ export default function HeroSection() {
     return (
       <section className="h-screen relative flex items-center justify-center overflow-hidden">
         {/* Fallback content for SSR */}
-        <video
-          src="/hero-video.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 w-full h-full object-cover z-0"
-        />
+        <div className="absolute inset-0 overflow-hidden">
+          <video
+            src="/hero-video.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="absolute inset-0 w-full h-full object-cover z-0"
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/80 z-10" />
         <div className="relative z-20 text-center container-premium">
           <div className="mb-6">
@@ -79,20 +82,22 @@ export default function HeroSection() {
 
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Enhanced Video Background with Parallax */}
-      <motion.div 
-        style={{ x: backgroundX, y: backgroundY }}
-        className="absolute inset-[-2%] z-0"
-      >
-        <video
-          src="/hero-video.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover scale-105"
-        />
-      </motion.div>
+      {/* Enhanced Video Background with Constrained Parallax */}
+      <div className="absolute inset-0 overflow-hidden">
+        <motion.div 
+          style={{ x: backgroundX, y: backgroundY }}
+          className="absolute inset-[-5%] z-0"
+        >
+          <video
+            src="/hero-video.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover scale-110"
+          />
+        </motion.div>
+      </div>
       
       {/* Sophisticated Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/80 z-10" />

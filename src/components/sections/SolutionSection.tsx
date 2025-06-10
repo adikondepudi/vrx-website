@@ -35,7 +35,7 @@ export default function SolutionSection() {
           pin: true,
           scrub: 1,
           start: 'top top',
-          end: '+=5000',
+          end: '+=3000', // Reduced from 5000 to make scrolling more manageable
           onUpdate: (self) => {
             const progress = self.progress;
             if (progress < 0.33) setCurrentStep(0);
@@ -53,10 +53,10 @@ export default function SolutionSection() {
       gsap.set('#faceplate', { xPercent: 20, yPercent: -10 });
       gsap.set(['#controller-left', '#controller-right'], { yPercent: 20 });
 
-      // Animation sequence
+      // Animation sequence with adjusted positions for better visibility
       tl.addLabel("start")
         .to('#headset-body', { 
-          scale: 1.2, 
+          scale: 1.1, // Reduced scale to prevent cutoff
           duration: 2,
           ease: "power2.out"
         }, "start")
@@ -64,10 +64,10 @@ export default function SolutionSection() {
         .addLabel("faceplate-reveal", "+=0.5")
         .to('#faceplate', { 
           opacity: 1, 
-          scale: 1,
-          xPercent: -140, 
-          yPercent: 15, 
-          rotate: -12,
+          scale: 0.9, // Reduced scale
+          xPercent: -100, // Adjusted position
+          yPercent: 10, 
+          rotate: -8,
           duration: 2.5,
           ease: "power2.out"
         }, "faceplate-reveal")
@@ -75,21 +75,21 @@ export default function SolutionSection() {
         .addLabel("controllers-reveal", "+=1")
         .to(['#controller-left', '#controller-right'], { 
           opacity: 1, 
-          scale: 1,
-          yPercent: -60, 
+          scale: 0.9, // Reduced scale
+          yPercent: -40, // Adjusted position
           stagger: 0.3,
           duration: 2.5,
           ease: "power2.out"
         }, "controllers-reveal")
         .to('#controller-left', { 
-          xPercent: -35, 
-          rotate: 15,
+          xPercent: -25, // Reduced offset
+          rotate: 10,
           duration: 2,
           ease: "power2.out"
         }, "<")
         .to('#controller-right', { 
-          xPercent: 35, 
-          rotate: -15,
+          xPercent: 25, // Reduced offset
+          rotate: -10,
           duration: 2,
           ease: "power2.out" 
         }, "<")
@@ -115,7 +115,7 @@ export default function SolutionSection() {
   }, []);
 
   return (
-    <section ref={componentRef} className="relative bg-black">
+    <section ref={componentRef} className="relative bg-black min-h-screen">
       {/* Header Content */}
       <div className="container-premium text-center pt-24 md:pt-32 pb-16">
         <motion.div
@@ -143,46 +143,46 @@ export default function SolutionSection() {
         </motion.div>
       </div>
 
-      {/* Interactive Visualization */}
-      <div ref={canvasRef} className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden">
-        <div className="relative">
-          {/* Main Headset */}
+      {/* Interactive Visualization - Adjusted container */}
+      <div ref={canvasRef} className="relative min-h-[600px] flex items-center justify-center px-4 pb-24">
+        <div className="relative max-w-full">
+          {/* Main Headset - Adjusted sizes for better viewport fit */}
           <img 
             id="headset-body" 
             src="/images/product/headset-body.png" 
             alt="VRx Headset Body" 
-            className="w-[400px] md:w-[500px] lg:w-[600px] z-10 relative shadow-glow" 
+            className="w-[300px] md:w-[400px] lg:w-[500px] xl:w-[600px] z-10 relative shadow-glow" 
           />
           
-          {/* Dissection Components */}
+          {/* Dissection Components - Matching adjusted sizes */}
           <img 
             id="faceplate" 
             src="/images/product/faceplate.png" 
             alt="VRx Faceplate" 
-            className="absolute top-0 left-0 w-[400px] md:w-[500px] lg:w-[600px] z-20" 
+            className="absolute top-0 left-0 w-[300px] md:w-[400px] lg:w-[500px] xl:w-[600px] z-20" 
           />
           <img 
             id="controller-left" 
             src="/images/product/controller-left.png" 
             alt="VRx Left Controller" 
-            className="absolute top-0 left-0 w-[400px] md:w-[500px] lg:w-[600px] z-20" 
+            className="absolute top-0 left-0 w-[300px] md:w-[400px] lg:w-[500px] xl:w-[600px] z-20" 
           />
           <img 
             id="controller-right" 
             src="/images/product/controller-right.png" 
             alt="VRx Right Controller" 
-            className="absolute top-0 left-0 w-[400px] md:w-[500px] lg:w-[600px] z-20" 
+            className="absolute top-0 left-0 w-[300px] md:w-[400px] lg:w-[500px] xl:w-[600px] z-20" 
           />
         </div>
 
-        {/* Dynamic Text Callouts */}
+        {/* Dynamic Text Callouts - Positioned to not overlap images */}
         <motion.div
           key={currentStep}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.5 }}
-          className="absolute bottom-24 left-1/2 transform -translate-x-1/2 text-center max-w-md"
+          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-center max-w-md z-30"
         >
           <div className="glass-dark rounded-2xl p-6 shadow-premium">
             <h3 className="text-xl font-semibold text-white mb-2">
@@ -195,7 +195,7 @@ export default function SolutionSection() {
         </motion.div>
 
         {/* Progress Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 flex space-x-2 z-30">
           {steps.map((_, index) => (
             <div
               key={index}

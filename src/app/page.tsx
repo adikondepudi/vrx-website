@@ -8,14 +8,41 @@ import Footer from '@/components/sections/Footer';
 
 export default function Home() {
   return (
-    <main className="overflow-x-hidden">
-      <HeroSection />
-      <ProblemSection />
-      <SolutionSection />
-      <HowItWorksSection />
-      <ValidationSection />
-      <TeamSection />
-      <Footer />
+    <main className="relative w-full overflow-x-hidden">
+      {/* Hero Section */}
+      <div className="relative w-full">
+        <HeroSection />
+      </div>
+      
+      {/* Problem Section */}
+      <div className="relative w-full">
+        <ProblemSection />
+      </div>
+      
+      {/* Solution Section with Pinned Scroll */}
+      <div className="relative w-full">
+        <SolutionSection />
+      </div>
+      
+      {/* How It Works Section with Horizontal Scroll */}
+      <div className="relative w-full">
+        <HowItWorksSection />
+      </div>
+      
+      {/* Validation Section */}
+      <div className="relative w-full">
+        <ValidationSection />
+      </div>
+      
+      {/* Team Section */}
+      <div className="relative w-full">
+        <TeamSection />
+      </div>
+      
+      {/* Footer */}
+      <div className="relative w-full">
+        <Footer />
+      </div>
     </main>
   );
 }
