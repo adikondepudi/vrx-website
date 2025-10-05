@@ -29,13 +29,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} overflow-x-hidden`}>
       <head>
-        <link
-          rel="preload"
-          href="/fonts/inter-var.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <meta name="format-detection" content="telephone=no" />

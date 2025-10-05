@@ -66,7 +66,7 @@ export default function Home() {
             <div className="relative overflow-hidden w-full pt-[56.25%] glass rounded-2xl shadow-premium border border-gray-800/50">
               <iframe 
                 className="absolute top-0 left-0 bottom-0 right-0 w-full h-full"
-                src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID_HERE"
+                src="https://www.youtube.com/embed/GaKoeFerzo0"
                 title="YouTube video player" 
                 frameBorder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 

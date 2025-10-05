@@ -3,13 +3,36 @@ import TeamMemberCard from '@/components/ui/TeamMemberCard';
 import Image from 'next/image';
 
 const coreTeam = [
-  { name: 'Betania', title: 'Clinical Lead', imageUrl: '/images/team/betania.jpg' },
-  { name: 'Adi', title: 'Technical Co-Lead', imageUrl: '/images/team/adi.jpg' },
-  { name: 'Pratibha', title: 'Research Lead', imageUrl: '/images/team/pratibha.jpg' },
-  { name: 'Edmund', title: 'Developer', imageUrl: '/images/team/edmund.jpg' },
-  { name: 'Arya', title: 'Developer', imageUrl: '/images/team/arya.jpg' },
-  { name: 'Isaac', title: 'Developer', imageUrl: '/images/team/isaac.jpg' },
-  // NOTE: Update titles and ensure image filenames in /public/images/team/ match exactly.
+  { 
+    name: 'Betania', 
+    title: 'Lead', 
+    imageUrl: '/images/team/member_betania.jpeg' 
+  },
+  { 
+    name: 'Adi', 
+    title: 'Member', 
+    imageUrl: '/images/team/member_adi.jpeg'
+  },
+  { 
+    name: 'Pratibha', 
+    title: 'Member', 
+    imageUrl: '/images/team/member_pratibha.jpeg' 
+  },
+  { 
+    name: 'Edmund', 
+    title: 'Member', 
+    imageUrl: '/images/team/member_edmund.jpeg' 
+  },
+  { 
+    name: 'Arya', 
+    title: 'Member', 
+    imageUrl: '/images/team/member_arya.jpeg' 
+  },
+  { 
+    name: 'Isaac', 
+    title: 'Member', 
+    imageUrl: '/images/team/member_issac.jpeg' 
+  },
 ];
 
 export default function TeamPage() {
@@ -22,10 +45,6 @@ export default function TeamPage() {
             <h1 className="text-headline font-extralight text-white mb-8">
               Meet the Minds Behind <span className="gradient-text font-light">RecoVR</span><span className="text-gray-500">.</span>
             </h1>
-            {/* Team Photo Placeholder */}
-            <div className="w-full max-w-4xl h-96 bg-gray-900 rounded-2xl flex items-center justify-center text-gray-500 italic mx-auto mb-12 border border-gray-800/50">
-              [PLACEHOLDER FOR A PROFESSIONAL TEAM PHOTO HERE]
-            </div>
             <h2 className="text-title font-medium text-white mb-4">Our Mission</h2>
             <p className="text-body-large text-gray-400 leading-relaxed">
               We are a dedicated, multidisciplinary team of engineers, developers, and researchers from Johns Hopkins University united by a single mission: to enhance athlete safety through technological innovation. Frustrated by the shortcomings of current concussion management tools, we set out to create a solution that provides the objective clarity that athletes and clinicians deserve. Our team combines expertise in biomedical engineering, software development, and clinical research to drive the future of TBI assessment.
@@ -46,7 +65,7 @@ export default function TeamPage() {
             <div className="max-w-4xl mx-auto">
               <div className="glass rounded-3xl p-6 md:p-8 shadow-premium border border-gray-800/50">
                 <Image
-                  src="/images/events/ana-conference-2025.jpg" // NOTE: Ensure this filename is correct
+                  src="/images/events/ana_picture.jpg" // NOTE: Ensure this filename is correct
                   alt="The RecoVR team at the ANA 2025 Annual Meeting"
                   width={1200}
                   height={800}
