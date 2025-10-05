@@ -22,7 +22,7 @@ export default function ContactPage() {
               <div>
                 <h3 className="text-sm text-gray-500 uppercase tracking-wider mb-2">Follow Our Journey</h3>
                 <a 
-                  href="YOUR_LINKEDIN_PAGE_URL_HERE" 
+                  href="https://www.linkedin.com/company/adt18-recovr/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="text-xl text-primary-400 hover:text-primary-300 transition-colors"

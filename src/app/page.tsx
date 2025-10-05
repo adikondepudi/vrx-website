@@ -11,7 +11,7 @@ export default function Home() {
               Clarity in Concussion Recovery<span className="text-gray-500">.</span>
             </h1>
             <p className="text-body-large text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
-              RecoVR is pioneering a new standard in Traumatic Brain Injury (TBI) assessment. Our platform, VRx, provides objective, data-driven insights to help clinicians make safer return-to-play decisions.
+              RecoVR is pioneering a new standard in Traumatic Brain Injury (TBI) assessment. Our platform, RecoVR, provides objective, data-driven insights to help clinicians make safer return-to-play decisions.
             </p>
             <a href="/our-solution" className="btn-primary shadow-premium">
               Learn More About Our Solution
@@ -35,10 +35,10 @@ export default function Home() {
         <section className="section-padding bg-black border-t border-gray-800/50">
           <div className="container-premium text-center max-w-5xl mx-auto">
             <h2 className="text-headline font-extralight text-white mb-8">
-              Introducing VRx: A New Era of <span className="gradient-text font-light">Neuromonitoring</span><span className="text-gray-500">.</span>
+              Introducing RecoVR: A New Era of <span className="gradient-text font-light">Neuromonitoring</span><span className="text-gray-500">.</span>
             </h2>
             <p className="text-body-large text-gray-400 leading-relaxed mb-12">
-              VRx is a non-invasive software platform that transforms a standard VR headset into a powerful and objective clinical tool. Through a series of engaging, game-like assessments, VRx precisely measures key neurological biomarkers that are critical indicators of brain health and recovery.
+              RecoVR is a non-invasive software platform that transforms a standard VR headset into a powerful and objective clinical tool. Through a series of engaging, game-like assessments, RecoVR precisely measures key neurological biomarkers that are critical indicators of brain health and recovery.
             </p>
             <div className="glass rounded-2xl p-8 lg:p-10 border border-gray-800/50 text-left max-w-3xl mx-auto">
               <h3 className="text-title font-medium text-white mb-6">We capture quantitative data on:</h3>
@@ -57,10 +57,10 @@ export default function Home() {
         <section className="section-padding bg-gray-950 border-t border-gray-800/50">
           <div className="container-premium text-center max-w-4xl mx-auto">
             <h2 className="text-headline font-extralight text-white mb-8">
-              See <span className="gradient-text font-light">VRx</span> in Action<span className="text-gray-500">.</span>
+              See <span className="gradient-text font-light">RecoVR</span> in Action<span className="text-gray-500">.</span>
             </h2>
             <p className="text-body-large text-gray-400 leading-relaxed mb-12">
-              Watch our brief demo to see how the VRx platform guides an athlete through key assessments, capturing critical neurological data in just minutes. See how we turn complex eye movements into clear, actionable insights for clinicians.
+              Watch our brief demo to see how the RecoVR platform guides an athlete through key assessments, capturing critical neurological data in just minutes. See how we turn complex eye movements into clear, actionable insights for clinicians.
             </p>
             {/* YouTube Embed */}
             <div className="relative overflow-hidden w-full pt-[56.25%] glass rounded-2xl shadow-premium border border-gray-800/50">
