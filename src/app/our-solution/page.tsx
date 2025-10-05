@@ -3,15 +3,15 @@ import Footer from '@/components/sections/Footer';
 const features = [
   {
     title: "Objective Data, Not Opinions",
-    description: "VRx replaces subjective symptom reporting with precise, quantitative metrics on eye movement and balance. Our system is designed to be resistant to 'sandbagging,' ensuring the data is a true reflection of an athlete's neurological state."
+    description: "RecoVR replaces subjective symptom reporting with precise, quantitative metrics on eye movement and balance. Our system is designed to be resistant to 'sandbagging,' ensuring the data is a true reflection of an athlete's neurological state."
   },
   {
     title: "Comprehensive Neurological Profile",
-    description: "Instead of using multiple tools for different tests, VRx provides a unified assessment of key biomarkers in one seamless experience. This holistic view allows for a more complete understanding of an athlete's recovery trajectory."
+    description: "Instead of using multiple tools for different tests, RecoVR provides a unified assessment of key biomarkers in one seamless experience. This holistic view allows for a more complete understanding of an athlete's recovery trajectory."
   },
   {
     title: "Accessible & Hardware-Agnostic",
-    description: "We are a software and data company, not a hardware company. VRx is built to run on commercially available VR headsets, eliminating the need for expensive, proprietary equipment. Our subscription-based model lowers the barrier to adoption for organizations of all sizes, from professional leagues to collegiate teams."
+    description: "We are a software and data company, not a hardware company. RecoVR is built to run on commercially available VR headsets, eliminating the need for expensive, proprietary equipment. Our subscription-based model lowers the barrier to adoption for organizations of all sizes, from professional leagues to collegiate teams."
   },
   {
     title: "Clinically Validated",
@@ -27,10 +27,10 @@ export default function SolutionPage() {
           {/* Header */}
           <div className="max-w-4xl mx-auto mb-20">
             <h1 className="text-headline font-extralight text-white mb-8">
-              The VRx Advantage: <span className="gradient-text font-light">Objective, Comprehensive, Accessible</span><span className="text-gray-500">.</span>
+              The RecoVR Advantage: <span className="gradient-text font-light">Objective, Comprehensive, Accessible</span><span className="text-gray-500">.</span>
             </h1>
             <p className="text-body-large text-gray-400 leading-relaxed">
-              Our mission is to equip every team and clinic with the tools they need to protect their athletes. VRx was designed from the ground up to overcome the limitations of traditional TBI assessment.
+              Our mission is to equip every team and clinic with the tools they need to protect their athletes. RecoVR was designed from the ground up to overcome the limitations of traditional TBI assessment.
             </p>
           </div>
 

@@ -10,7 +10,7 @@ export default function ContactPage() {
               Partner With <span className="gradient-text font-light">Us</span><span className="text-gray-500">.</span>
             </h1>
             <p className="text-body-large text-gray-400 leading-relaxed mb-12">
-              We are building the future of objective TBI assessment, and we believe collaboration is key. We are actively seeking clinical partners, advisors, and pilot programs to help us refine our technology and expand our impact. If you are a clinician, athletic trainer, or researcher interested in learning more about VRx or exploring a potential partnership, please get in touch.
+              We are building the future of objective TBI assessment, and we believe collaboration is key. We are actively seeking clinical partners, advisors, and pilot programs to help us refine our technology and expand our impact. If you are a clinician, athletic trainer, or researcher interested in learning more about RecoVR or exploring a potential partnership, please get in touch.
             </p>
             <div className="glass rounded-2xl p-8 border border-gray-800/50 space-y-6">
               <div>
