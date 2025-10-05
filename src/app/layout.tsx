@@ -14,7 +14,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://recovr-diagnostics.com'), // Example new domain
   title: {
-    default: "RecoVR: Clarity in Concussion Recovery",
+    default: "RecoVR: Clarity in TBI Recovery",
     template: "%s | RecoVR Diagnostics"
   },
   description: "RecoVR's VRx platform provides objective, data-driven insights for Traumatic Brain Injury (TBI) assessment to help clinicians make safer return-to-play decisions.",

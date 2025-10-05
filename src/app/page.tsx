@@ -8,7 +8,7 @@ export default function Home() {
         <section className="section-padding flex items-center justify-center text-center bg-black min-h-[70vh]">
           <div className="container-premium">
             <h1 className="text-display font-extralight text-white mb-8">
-              Clarity in Concussion Recovery<span className="text-gray-500">.</span>
+              Clarity in Traumatic Brain Injury Recovery<span className="text-gray-500">.</span>
             </h1>
             <p className="text-body-large text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed">
               RecoVR is pioneering a new standard in Traumatic Brain Injury (TBI) assessment. Our platform, RecoVR, provides objective, data-driven insights to help clinicians make safer return-to-play decisions.
@@ -23,10 +23,10 @@ export default function Home() {
         <section className="section-padding bg-gray-950 border-t border-gray-800/50">
           <div className="container-premium text-center max-w-4xl mx-auto">
             <h2 className="text-headline font-extralight text-white mb-8">
-              The Guesswork in Concussion Recovery is <span className="gradient-accent-text font-light">Over</span><span className="text-gray-500">.</span>
+              The Guesswork in TBI Recovery is <span className="gradient-accent-text font-light">Over</span><span className="text-gray-500">.</span>
             </h2>
             <p className="text-body-large text-gray-400 leading-relaxed">
-              For too long, assessing an athlete's recovery from a concussion has relied on subjective feedback and tests that can be influenced by an athlete's desire to get back in the game. This ambiguity creates risk for players, teams, and clinicians. The current methods are often incomplete, inconsistent, and vulnerable to "sandbagging," leaving a critical gap in player safety.
+              For too long, assessing an athlete's recovery from a TBI has relied on subjective feedback and tests that can be influenced by an athlete's desire to get back in the game. This ambiguity creates risk for players, teams, and clinicians. The current methods are often incomplete, inconsistent, and vulnerable to "sandbagging," leaving a critical gap in player safety.
             </p>
           </div>
         </section>
